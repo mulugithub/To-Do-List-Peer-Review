@@ -25,7 +25,11 @@ clearCompletedBtn.addEventListener('click',
   });
 
 document.getElementById('add-task').addEventListener('keypress', (event) => {
-  if (event.key === 'Enter' && event.preventDefault() && todo.addItem(document.getElementById('add-task').value));
+  const description = document.getElementById('add-task').value;
+  if (event.key === 'Enter' && description !== '' && todo.addItem) {
+    event.preventDefault();
+    todo.addItem(description);
+  }
 });
 
 window.addEventListener('load', () => {

@@ -978,7 +978,11 @@ clearCompletedBtn.addEventListener('click', function () {
   todo.clearCompleted();
 });
 document.getElementById('add-task').addEventListener('keypress', function (event) {
-  if (event.key === 'Enter' && event.preventDefault() && todo.addItem(document.getElementById('add-task').value)) ;
+  var description = document.getElementById('add-task').value;
+  if (event.key === 'Enter' && description !== '' && todo.addItem) {
+    event.preventDefault();
+    todo.addItem(description);
+  }
 });
 window.addEventListener('load', function () {
   todo.display();
