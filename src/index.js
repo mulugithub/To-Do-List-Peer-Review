@@ -24,15 +24,8 @@ clearCompletedBtn.addEventListener('click',
     todo.clearCompleted();
   });
 
-// Add todo item when user press enter key
 document.getElementById('add-task').addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    const description = document.getElementById('add-task').value;
-    if (description !== '') {
-      todo.addItem(description);
-    }
-  }
+  if (event.key === 'Enter' && event.preventDefault() && todo.addItem(document.getElementById('add-task').value));
 });
 
 window.addEventListener('load', () => {
