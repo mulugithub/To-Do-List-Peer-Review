@@ -1,14 +1,13 @@
 import { saveData } from './localStorage.js';
 
-const updateStatus = (todoCheck, sortedArr, i) => {
+const updateStatus = (todoCheck, sortedList, i) => {
   todoCheck.classList.toggle('checked');
   if (todoCheck.classList.contains('checked')) {
-    sortedArr[i].completed = true;
+    sortedList[i].completed = true;
   } else {
-    sortedArr[i].completed = false;
+    sortedList[i].completed = false;
   }
-  // updated tasks list will be stored in local storage.
-  saveData(sortedArr);
+  saveData(sortedList);
 };
 
 export default updateStatus;
