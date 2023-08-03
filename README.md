@@ -3,7 +3,7 @@
   <img src="./src/asset/my Logo.gif" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>To DO List App</b></h3>
+  <h3><b>To DO List Project</b></h3>
 
 </div>
 <!-- TABLE OF CONTENTS -->
